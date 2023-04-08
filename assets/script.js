@@ -27,7 +27,7 @@ function ChangeSlide(sens) {
     numero = numero + sens;
     if (numero < 0)
         numero = slides.length - 1;
-    if (numero > slides.length)
+    if (numero >= slides.length)
         numero = 0;
     slideImg.src = "./assets/images/slideshow/" + slides[numero].image;
     tagline.innerHTML = slides[numero].tagLine;
@@ -51,4 +51,4 @@ function clickArrow(element) {
 	});
 }
 
-setInterval("ChangeSlide(1)", 3000);
+setInterval("ChangeSlide(1)", 2000);
